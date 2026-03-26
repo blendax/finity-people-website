@@ -56,6 +56,34 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Finity People",
+  url: "https://finitypeople.se",
+  logo: "https://finitypeople.se/logo.png",
+  description:
+    "Boutique Data & AI Consultancy based in Sweden. We turn data into decisions.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Kungsgatan 44",
+    addressLocality: "Stockholm",
+    postalCode: "111 35",
+    addressCountry: "SE",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+46-8-123-45-67",
+    contactType: "sales",
+    email: "hello@finitypeople.se",
+  },
+  sameAs: [
+    "https://linkedin.com/company/finitypeople",
+    "https://twitter.com/finitypeople",
+    "https://github.com/finitypeople",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -67,7 +95,13 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className="min-h-full flex flex-col font-sans">
         <ThemeProvider>
           <Header />
           <main className="flex-1">{children}</main>
