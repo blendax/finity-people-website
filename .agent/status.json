@@ -1,0 +1,14 @@
+{
+  "status": "RUNNING",
+  "agent_name": "create-webpage-as-agent",
+  "task": "Finity People - New Modern Website",
+  "spec_file": "spec/website-spec.md",
+  "branch": "agent/create-webpage-as-agent/finity-people-website",
+  "started_at": "2026-03-26T10:54:30Z",
+  "last_activity": "2026-03-26T11:04:36Z",
+  "progress": "Building and committing",
+  "question": null,
+  "pr_url": null,
+  "commits": 0,
+  "error": null
+}

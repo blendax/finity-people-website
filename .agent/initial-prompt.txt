@@ -1,0 +1,1 @@
+Read the spec at spec/website-spec.md and follow the instructions in CLAUDE.md. Your agent name is create-webpage-as-agent.
